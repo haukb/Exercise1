@@ -14,3 +14,4 @@ def evaluate_polynomial(a, x):
 evaluate_polynomial([1/factorial(x) for x in range(0, K)], X)
 # For K=10 and X=4, should print: 54.15414462081129
 
+#Question(Hauk): where to use reduce() func? 
