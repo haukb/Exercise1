@@ -2,20 +2,15 @@ v = [1,2,3,4]
 
 # Overwrite the function moving_avg
 def moving_avg():
-    avgSum = 0
-    term = 0
-    numTerms = [1, 1]
+    total = 0.0
+    counter = 0
+    avg = None
+    
     while True:
-        ##First 4 lines displays what happens in the code
-        #print ('avgSum', avgSum)
-        #print ('term', term)
-        #print ('Number of terms', numTerms[0])
-        #print ()
-        
-        term = yield avgSum/numTerms[0] ##Set the current term and return the updated moving average
-        avgSum += term
-        numTerms.pop(0) ##Removes the element indicating the current number of terms
-        numTerms.append(numTerms[-1] + 1) ##Adds one higher number to the end of the list
+        term = yield avg 
+        total += term
+        counter += 1
+        avg = total/counter
 
 # Testing your function
 ma = moving_avg()
