@@ -1,5 +1,5 @@
 import random
-N = 100000
+N = 1000000
 
 x = [random.random() for a in range(N)]
 y = [random.random() for a in range(N)]
